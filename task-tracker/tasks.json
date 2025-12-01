@@ -1,0 +1,23 @@
+[
+  {
+    "ID": 1,
+    "description": "buy a car",
+    "status": "in-progress",
+    "createdAt": "2025-11-15T16:13:10.5744762+03:00",
+    "updatedAt": "2025-11-16T15:51:01.5261862+03:00"
+  },
+  {
+    "ID": 2,
+    "description": "buy a house",
+    "status": "done",
+    "createdAt": "2025-11-15T16:25:52.2878188+03:00",
+    "updatedAt": "2025-11-16T15:50:04.6140837+03:00"
+  },
+  {
+    "ID": 3,
+    "description": "build a new project this week",
+    "status": "todo",
+    "createdAt": "2025-11-15T16:26:20.5322956+03:00",
+    "updatedAt": "2025-11-15T16:26:20.5322956+03:00"
+  }
+]
