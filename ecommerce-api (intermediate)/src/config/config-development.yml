@@ -1,0 +1,53 @@
+server:
+  internalPort: 5005
+  externalPort: 5005
+  runMode: debug
+  domain: localhost
+cors:
+  allowOrigins: "*"
+postgres:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: admin
+  dbName: ecommerce
+  sslMode: disable
+  maxIdleConns: 15
+  maxOpenConns: 100
+  connMaxLifetime: 5
+redis:
+  host: localhost
+  port: 6379
+  password: password
+  db: 0
+  dialTimeout: 5
+  readTimeout: 5
+  writeTimeout: 5
+  poolSize: 10
+  poolTimeout: 15
+  idleCheckFrequency: 500
+password:
+  includeChars: true
+  includeDigits: true
+  minLength: 6
+  maxLength: 64
+  includeUppercase: true
+  includeLowercase: true
+jwt:
+  secret: "mySecretKey"
+  refreshSecret: "mySecretKey"
+  accessTokenExpireDuration: 1440
+  refreshTokenExpireDuration: 1440
+
+# Payment Gateway Configuration (Currently using mock implementation)
+# TODO: Configure real payment gateway when ready for production
+zarinpal:
+  merchantId: ""
+  paymentRequestUrl: ""
+  paymentVerifyUrl: ""
+  paymentPageUrl: ""
+  sandboxPaymentRequestUrl: ""
+  sandboxPaymentVerifyUrl: ""
+  sandboxPaymentPageUrl: ""
+  callbackUrl: "/api/v1/shop/payments/verify"
+  sandbox: true
