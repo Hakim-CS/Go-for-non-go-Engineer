@@ -23,7 +23,11 @@ func fetchRealWheather(city string) (WheatherRespond, error) {
 
 	// make a http req
 	client := http.Client{}
-	req, _ := http.NewRequest("GET", url, nil)
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		fmt.Println("error while creating req: ", err)
+		return WheatherRespond{}, nil
+	}
 	req.Header.Set("user-agent", "wheather-api-practice")
 
 	resp, err := client.Do(req)
