@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Workout Tracker</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2>🏋️ Workout Tracker</h2>
+        <div>
+            <span id="username"></span>
+            <button onclick="logout()" class="btn btn-small">Logout</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>My Dashboard</h1>
+        
+        <!-- Exercises Section -->
+        <div class="section">
+            <h2>Available Exercises</h2>
+            <div id="exercisesList"></div>
+        </div>
+        
+        <!-- Workouts Section -->
+        <div class="section">
+            <h2>My Workouts</h2>
+            <button onclick="toggleForm('workoutForm')" class="btn btn-secondary">+ Create Workout</button>
+            
+            <div id="workoutForm" class="form-container" style="display: none;">
+                <form id="createWorkoutForm">
+                    <div class="form-group">
+                        <label for="workoutName">Workout Name</label>
+                        <input type="text" id="workoutName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="workoutExercise">Exercise</label>
+                        <select id="workoutExercise" required></select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sets">Sets</label>
+                        <input type="number" id="sets" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reps">Reps</label>
+                        <input type="number" id="reps" min="1" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+            
+            <div id="workoutsList"></div>
+        </div>
+        
+        <p class="message" id="message"></p>
+    </div>
+    
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
